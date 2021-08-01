@@ -1,8 +1,6 @@
-cmake_minimum_required(VERSION 3.16)
-
-SET(CMAKE_BUILD_TYPE Debug)
-
-project(study_courses CXX)
+get_filename_component(CurrentDir ${CMAKE_CURRENT_SOURCE_DIR} NAME)
+string(REPLACE " " "_" CurrentDir ${CurrentDir})
+set(ParentProject ${ParentProject}_${CurrentDir})
 
 FILE(GLOB subdirectories "./*")
 
